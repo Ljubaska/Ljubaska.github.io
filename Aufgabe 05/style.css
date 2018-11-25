@@ -1,0 +1,67 @@
+
+html { 
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+fieldset {
+	width: 60%;
+}
+
+fieldset > p {
+	padding: 0.5em;
+}
+
+#checkout {
+	border-left: thin dotted black;
+	width: 300px;
+	height: 100%;
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	padding: 0.5em;
+}
+
+
+h2 {
+	border-left: 3px solid #6b0001;
+	padding-left: 2px;
+	padding-top: 5px;
+	border-top: 2px dotted #576e3e;
+	width: 60%;
+}
+
+#priceMain {
+	position: fixed;
+	background-color: #fc9f9f;
+	padding: 0.5em;
+	border: 2px solid black;
+	right: 20px;
+	bottom: 50px;
+}
+
+h3 {
+	padding-left: 2px;
+	border-left: 3px solid #fc4c5b;
+}
+
+p {
+	padding: -5px;
+	margin: -5px;
+}
+
+#check {
+	position: fixed;
+	border: thin solid black;
+	bottom: 20px;
+	right: 20px;
+	padding: 0.25em;
+}
+
+#missing {
+	border: thin solid black;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: #fc899a;
+	color: white;
+}
