@@ -6,21 +6,22 @@ namespace Endabgabe {
 
     export let crc2: CanvasRenderingContext2D;
     
-    let server: string = "https://ljubaska2.herokuapp.com/";
+    let server: string = "https://ljubaska2.herokuapp.com";
     let golden: number = 0.62;
     let objects: DrawObject[] = [];
     let birds: Birds[] = [];
     let imagedata: ImageData;
     let fps: number = 25;
-    let i: number = 0;
     let xMouse: number;
     let yMouse: number;
     let snowball: Snowball;
     export let name: string;
     export let score: number = 0;
-    let gameEndbool: boolean = false;
     export let canvas: HTMLCanvasElement;
     let start: HTMLButtonElement;
+    let ende: HTMLDivElement;
+    let reloadGame: HTMLButtonElement;
+    let yourScore: HTMLFieldSetElement;
 
 
     function listeners(): void {
@@ -32,8 +33,10 @@ namespace Endabgabe {
 
     }
     function init(): void {
-        document.getElementById("start").addEventListener("click", startGame);
-        document.getElementById("ende").classList.add("invisible");
+        start = <HTMLButtonElement>document.getElementById("start");
+        start.addEventListener("click", startGame);
+        ende = <HTMLDivElement>document.getElementById("ende");
+        ende.classList.add("invisible");
     }
     //Nach laden der Seite wird die Funktion init aufgerufen, die an das HtmlElement "Anleitung" einen click-Eventlistener anhängt, 
     //der die Funktion startGame aufruft
@@ -158,7 +161,7 @@ namespace Endabgabe {
                                 if (yMouse >= objects[a].yP - 25 && yMouse <= objects[a].yP + 60) {
                                     console.log("object getroffen");
                                     objects.splice(a, 1);
-                                    let bird = new Birds();
+                                    let bird: Birds = new Birds();
                                     objects.push(bird);
                                     birds.push(bird);
 
@@ -185,8 +188,10 @@ namespace Endabgabe {
                 console.log(objects[i]);
             }
         }
-        snowball = null;
+
     }
+    
+    
 
 
 
@@ -219,13 +224,16 @@ namespace Endabgabe {
 
     function gameEnds(): void {
         document.getElementsByTagName("canvas")[0].classList.add("invisible");
-        document.getElementById("ende").classList.remove("invisible");
-        document.getElementById("reload").classList.remove("invisible");
-        document.getElementById("yourScore").innerText = "Deine Punktzahl:" + " " + score.toString();
-        document.getElementById("reload").addEventListener("click", reload);
+        ende = <HTMLDivElement>document.getElementById("ende");
+        ende.classList.remove("invisible");
+        reloadGame = <HTMLButtonElement>document.getElementById("reload");
+        reloadGame.classList.remove("invisible");
+        reloadGame.addEventListener("click", reload);
+        yourScore = <HTMLFieldSetElement>document.getElementById("yourScore");
+        yourScore.innerText = "Deine Punktzahl:" + " " + score.toString();
 
-        DatabaseClient.insert();
-        DatabaseClient.getHighscore();
+      //  DatabaseClient.insert();
+        //DatabaseClient.getHighscore();
 
     }
 
