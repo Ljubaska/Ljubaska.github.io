@@ -13,9 +13,9 @@ var Endabgabe;
         move() {
             if (this.xP <= 0)
                 this.xP = Endabgabe.canvas.width;
-            this.pick();
+            this.fly();
         }
-        pick() {
+        fly() {
             this.xD = Math.random() * (-20);
             this.yD = Math.random() * (0);
             this.xP += this.xD;

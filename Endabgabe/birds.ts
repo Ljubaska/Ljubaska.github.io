@@ -21,11 +21,11 @@ namespace Endabgabe {
             this.xP = canvas.width;
             
 
-                this.pick();
+                this.fly();
             
         }
 
-        pick(): void {
+        fly(): void {
 
             this.xD = Math.random() * (-20);
             this.yD = Math.random() * (0);

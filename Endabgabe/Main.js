@@ -3,27 +3,30 @@
 var Endabgabe;
 (function (Endabgabe) {
     window.addEventListener("load", init);
-    let server = "https://ljubaska2.herokuapp.com/";
+    let server = "https://ljubaska2.herokuapp.com";
     let golden = 0.62;
     let objects = [];
     let birds = [];
     let imagedata;
     let fps = 25;
-    let i = 0;
     let xMouse;
     let yMouse;
     let snowball;
     Endabgabe.score = 0;
-    let gameEndbool = false;
     let start;
+    let ende;
+    let reloadGame;
+    let yourScore;
     function listeners() {
         console.log("listeners");
         document.getElementsByTagName("canvas")[0].addEventListener("click", mouseEvent);
         //"Click"-Eventlistener vom Typ MouseEvent an canvas
     }
     function init() {
-        document.getElementById("start").addEventListener("click", startGame);
-        document.getElementById("ende").classList.add("invisible");
+        start = document.getElementById("start");
+        start.addEventListener("click", startGame);
+        ende = document.getElementById("ende");
+        ende.classList.add("invisible");
     }
     //Nach laden der Seite wird die Funktion init aufgerufen, die an das HtmlElement "Anleitung" einen click-Eventlistener anhängt, 
     //der die Funktion startGame aufruft
@@ -138,7 +141,6 @@ var Endabgabe;
                 console.log(objects[i]);
             }
         }
-        snowball = null;
     }
     //Schnee
     function generateSnow() {
@@ -164,12 +166,15 @@ var Endabgabe;
     }*/
     function gameEnds() {
         document.getElementsByTagName("canvas")[0].classList.add("invisible");
-        document.getElementById("ende").classList.remove("invisible");
-        document.getElementById("reload").classList.remove("invisible");
-        document.getElementById("yourScore").innerText = "Deine Punktzahl:" + " " + Endabgabe.score.toString();
-        document.getElementById("reload").addEventListener("click", reload);
-        DatabaseClient.insert();
-        DatabaseClient.getHighscore();
+        ende = document.getElementById("ende");
+        ende.classList.remove("invisible");
+        reloadGame = document.getElementById("reload");
+        reloadGame.classList.remove("invisible");
+        reloadGame.addEventListener("click", reload);
+        yourScore = document.getElementById("yourScore");
+        yourScore.innerText = "Deine Punktzahl:" + " " + Endabgabe.score.toString();
+        //  DatabaseClient.insert();
+        //DatabaseClient.getHighscore();
     }
     function reload() {
         window.location.reload();

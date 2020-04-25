@@ -1,7 +1,7 @@
 namespace Endabgabe {
 export function drawSnowman(): void {
        
-    //Unterste Kugel
+   /* //Unterste Kugel
     crc2.fillStyle = "#FdF5E6"
     crc2.beginPath();
     crc2.arc(900, 550, 50, 0, 2 * Math.PI)
@@ -43,7 +43,7 @@ export function drawSnowman(): void {
     crc2.fillRect(862, 380, 70, 20);
     crc2.fillRect(875, 347, 45, 50);
     crc2.closePath();
-    crc2.fill();
+    crc2.fill();*/
 
 
     }
