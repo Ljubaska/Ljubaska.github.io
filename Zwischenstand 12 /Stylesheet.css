@@ -24,13 +24,14 @@ canvas{
 }
 
 form{
-
+font-family: Handel Gothic, fantasy;
 grid-column: 2;
-background-color: #8f8f8f;
+background-color: #41364d;
 position: absolute;
 bottom: 8px;
 right: 16px;
-font-size: 10px;
+font-size: 18px;
+color: #ffffff;
 
 }
 
@@ -54,17 +55,17 @@ border-radius: 100%;
 
 
 meter::-webkit-meter-bar {
-background: rgb(118, 150, 6);
+background: rgb(150, 6, 131);
     }
 
 meter::-webkit-meter-optimum-value {
-background: linear-gradient(#c8e90c, #c8e90c);
+background: linear-gradient(#df86a0, #efaaf1);
 }
 
 #particlecolor{
 
-width: 100px;
-height: 50px;
+width: 120px;
+height: 120px;
 }
 
 #nasalogo{

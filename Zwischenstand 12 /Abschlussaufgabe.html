@@ -22,18 +22,17 @@
     <form id="controlPanel" method="GET">
 
         <fieldset>
-            <legend> Wähle die Anzahl der Partikel </legend>
-            <input id="quantity" type="number" name="quantity" step="100" min="100" max="400" value="100" />
-            <meter value="0" min="100" max="400"> </meter>
+            <legend> Möchtest du eine kleine oder eine MEGA Explosion? </legend>
+            <input id="quantity" type="number" name="quantity" step="900" min="100" max="1000" value="100" />
+            <meter value="0" min="100" max="1000"> </meter>
         </fieldset>
         <fieldset>
-            <legend> Möchtest du eine Mega Explosion oder doch lieber ein kleines Feuerwerk? Wähle die Größe deines virtuellen Feuerwerkes. </legend>
+            <legend> Wähle die Explosionsdauer</legend>
             <input type="radio" name="explosionSize" id="small" value="1" checked />
-            <label for="small">Small</label>
-            <input type="radio" name="explosionSize" id="medium" value="1" />
-            <label for="medium">Medium</label>
-            <input type="radio" name="explosionSize" id="big" value="20" />
-            <label for="big">Big</label>
+            <label for="small">kurze Explosion</label>
+            <input type="radio" name="explosionSize" id="medium" value="10" />
+            <label for="medium">lange Explosion</label>
+            
         </fieldset>
         <fieldset>
             <legend> Wähle die gewünschte Form der Partikel </legend>
