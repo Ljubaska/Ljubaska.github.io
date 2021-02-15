@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Stylesheet.css" type="text/css" media="screen" />
+    <script src="ObjectMove.js"></script>
+    <script src="Forms.js"></script>
+    <script src="Main.js"></script>
+    <script src="generateRocket.js"></script>
+    <script src="Vector.js"></script>
+
+    <title>Virtuelles Feuerwerk</title>
+</head>
+
+<body>
+    <h1> Willkommen zum Feuerwerk der etwas anderen Art </h1>
+     <canvas width="900" height="700"></canvas>
+
+
+    <form id="controlPanel" method="GET">
+
+        <fieldset>
+            <legend> Wähle die Anzahl der Partikel </legend>
+            <input id="quantity" type="number" name="quantity" step="100" min="100" max="400" value="100" />
+            <meter value="0" min="100" max="400"> </meter>
+        </fieldset>
+        <fieldset>
+            <legend> Möchtest du eine Mega Explosion oder doch lieber ein kleines Feuerwerk? Wähle die Größe deines virtuellen Feuerwerkes. </legend>
+            <input type="radio" name="explosionSize" id="small" value="1" checked />
+            <label for="small">Small</label>
+            <input type="radio" name="explosionSize" id="medium" value="1" />
+            <label for="medium">Medium</label>
+            <input type="radio" name="explosionSize" id="big" value="20" />
+            <label for="big">Big</label>
+        </fieldset>
+        <fieldset>
+            <legend> Wähle die gewünschte Form der Partikel </legend>
+            <input type="radio" name="particleshape" value="circle" checked />
+            <label for="circle">Kreis</label>
+            <input type="radio" name="particleshape" value="smiley" />
+            <label for="smiley">Smiley</label>
+            <input type="radio" name="particleshape" value="heart" />
+            <label for="heart">Herz</label>
+            <input type="radio" name="particleshape" value="hexagon" />
+            <label for="hexagon">Hexagon</label>
+        </fieldset>
+       
+        <fieldset>
+            <legend> Sogar die Farbe kannst du dir selber aussuchen. </legend>
+            <input type="color" name="particlecolor" id="particlecolor" value="#ffffff">
+        </fieldset>
+    </form>
+
+
+    <div>
+        <input id="textarea" type="text" name="userTitel" placeholder="benenne dein Feuerwerk" required />
+        <button type="button" id="saveBtn" form="controlPanel">speichere deine Raketenkreation</button>
+
+        <fieldset id="fireworkTitel">
+            <legend>deine gespeicherten Raketenkreationen</legend>
+        </fieldset>
+        <button type="button" id="loadBtn">load rocket</button>
+    </div>
+    <img>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+h1{
+    font-family: Handel Gothic, fantasy;
+    font-size: 40px;
+    font-weight: 600;
+    color:  #ffffff;
+}
+body{
+    background-image: url("background-image.png");
+    display: grid;
+    grid-template-columns: 80% auto;
+    grid-template-rows: auto auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+canvas{
+    background-color: #000000;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border: 10px double #41364d;
+    position: absolute;
+    top: 16%;
+    text-align: center;
+    font-size: 18px;
+}
+
+form{
+
+grid-column: 2;
+background-color: #8f8f8f;
+position: absolute;
+bottom: 8px;
+right: 16px;
+font-size: 10px;
+
+}
+
+fieldset{
+margin: 0,5em;
+padding: 0,5em;
+/* border-style: none; */
+}
+
+div{    
+position: absolute;
+bottom: 1px;
+left: 16px;
+font-size: 18px;
+background-color: #41364d;
+padding: 1em;
+border-radius: 100%;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+}
+
+
+meter::-webkit-meter-bar {
+background: rgb(118, 150, 6);
+    }
+
+meter::-webkit-meter-optimum-value {
+background: linear-gradient(#c8e90c, #c8e90c);
+}
+
+#particlecolor{
+
+width: 100px;
+height: 50px;
+}
+
+#nasalogo{
+    position: relative;
+    grid-column: 2;
+    grid-row: 3;
+    margin: 10%;
+
+}
+
+#fireworkrockets{
+    position: relative;
+    grid-column: 1;
+    grid-row: 3;
+   
+
+}
