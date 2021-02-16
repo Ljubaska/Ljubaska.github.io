@@ -2,7 +2,7 @@
 var feuerwerkEndabgabe;
 (function (feuerwerkEndabgabe) {
     window.addEventListener("load", handleLoad);
-    let serverPage = "https://sarahabschlussarbeit.herokuapp.com/"; //"http://localhost:5001/";
+    let serverPage = "https://eialjubaska.herokuapp.com/"; //"http://localhost:5001/";
     let form;
     let quantity;
     let color;
