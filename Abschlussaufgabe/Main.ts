@@ -1,6 +1,6 @@
 namespace feuerwerkEndabgabe {
     window.addEventListener("load", handleLoad);
-    let serverPage: string = "https://sarahabschlussarbeit.herokuapp.com/"; //"http://localhost:5001/";
+    let serverPage: string = "https://eialjubaska.herokuapp.com/"; //"http://localhost:5001/";
     let form: HTMLFormElement;
     let quantity: number;
     let color: string;
