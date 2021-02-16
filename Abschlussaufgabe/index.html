@@ -1,3 +1,6 @@
+<!-- 
+    Wichtige Info: Der Code basiert größtenteils auf Sarah Frankes Code.
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,12 +14,17 @@
     <script src="generateRocket.js"></script>
     <script src="Vector.js"></script>
 
+    <audio controls>
+        <source src="firework.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
     <title>Virtuelles Feuerwerk</title>
 </head>
 
 <body>
     <h1> Willkommen zum Feuerwerk der etwas anderen Art </h1>
-     <canvas width="900" height="700"></canvas>
+    <canvas width="900" height="700"></canvas>
 
 
     <form id="controlPanel" method="GET">
@@ -32,7 +40,7 @@
             <label for="small">kurze Explosion</label>
             <input type="radio" name="explosionSize" id="medium" value="10" />
             <label for="medium">lange Explosion</label>
-            
+
         </fieldset>
         <fieldset>
             <legend> Wähle die gewünschte Form der Partikel </legend>
@@ -45,7 +53,7 @@
             <input type="radio" name="particleshape" value="hexagon" />
             <label for="hexagon">Hexagon</label>
         </fieldset>
-       
+
         <fieldset>
             <legend> Sogar die Farbe kannst du dir selber aussuchen. </legend>
             <input type="color" name="particlecolor" id="particlecolor" value="#ffffff">
