@@ -16,7 +16,7 @@ namespace end {
             crc2.moveTo(7, 0);
             crc2.arc(0, 0, 7, 0, 2 * Math.PI);
             crc2.lineWidth = 1;
-            crc2.fillStyle = "violet";
+            crc2.fillStyle = "white";
             crc2.strokeStyle = "black";
             crc2.fill();
             crc2.stroke();

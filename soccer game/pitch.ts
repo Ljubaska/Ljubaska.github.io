@@ -5,7 +5,7 @@ namespace end {
       // Outer lines
       crc2.beginPath();
       crc2.rect(0, 0, canvas.width, canvas.height);
-      crc2.fillStyle = "#060";
+      crc2.fillStyle = "lightgreen";
       crc2.fill();
       crc2.rect(5, 5, canvas.width - 10, canvas.height - 10);
       crc2.lineWidth = 1;
@@ -54,7 +54,7 @@ namespace end {
       crc2.lineTo(0, (canvas.height / 2) - 22);
       crc2.lineTo(10, (canvas.height / 2) - 22);
       crc2.lineWidth = 2;
-      crc2.fillStyle = "black";
+      crc2.fillStyle = "purple";
       crc2.fill();
       crc2.stroke();
       crc2.closePath();
@@ -94,7 +94,7 @@ namespace end {
       crc2.lineTo(canvas.width, (canvas.height / 2) - 22);
       crc2.lineTo(canvas.width - 10, (canvas.height / 2) - 22);
       crc2.lineWidth = 2;
-      crc2.fillStyle = "black";
+      crc2.fillStyle = "purple";
       crc2.fill();
       crc2.stroke();
       crc2.closePath();

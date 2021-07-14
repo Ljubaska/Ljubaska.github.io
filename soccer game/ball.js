@@ -13,7 +13,7 @@ var end;
             end.crc2.moveTo(7, 0);
             end.crc2.arc(0, 0, 7, 0, 2 * Math.PI);
             end.crc2.lineWidth = 1;
-            end.crc2.fillStyle = "violet";
+            end.crc2.fillStyle = "white";
             end.crc2.strokeStyle = "black";
             end.crc2.fill();
             end.crc2.stroke();
