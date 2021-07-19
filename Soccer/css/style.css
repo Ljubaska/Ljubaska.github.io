@@ -1,0 +1,37 @@
+body{
+    background-color:grey;
+}
+
+#formSettings div{
+    padding: 5px;
+}
+
+#formSettings label{
+    margin-left: 3px;
+}
+
+#formSettings input {
+    width:150px;
+}
+#formSettings select {
+    width:159px;
+}
+
+#settings{
+    float:left;
+}
+
+#field{
+    border: 2px solid white;
+}
+
+fieldset{
+    width: 400px;
+    float:left;
+}
+
+#manual{
+    width:250px;
+}
+
+

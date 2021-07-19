@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Football field</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div id="settings">
+            <form id="formSettings">
+                <h1>Settings</h1>
+                <div>
+                    <input
+                        id="teamName1"
+                        name="teamName1"
+                        value="1. FC Köln"
+                        type="text"
+                        required
+                    /><label for="teamName1">Team 1 (links)</label>
+                </div>
+                <div>
+                    <input
+                        id="teamName2"
+                        name="teamName2"
+                        value="SV Werder Bremen"
+                        type="text"
+                        required
+                    /><label for="teamName2">Team 2 (rechts)</label>
+                </div>
+                <div>
+                    <input
+                        id="minSpeed"
+                        name="minSpeed"
+                        value="5"
+                        max="10"
+                        min="1"
+                        type="number"
+                        required
+                    /><label for="minSpeed">Minimale Geschwindigkeit</label>
+                </div>
+                <div>
+                    <input
+                        id="maxSpeed"
+                        name="maxSpeed"
+                        value="10"
+                        max="20"
+                        min="1"
+                        type="number"
+                        required
+                    /><label for="maxSpeed">Maximale Geschwindigkeit</label>
+                </div>
+                <div>
+                    <input
+                        id="minPrecision"
+                        name="minPrecision"
+                        value="1"
+                        max="10"
+                        min="1"
+                        type="number"
+                        required
+                    /><label for="minPrecision">Minimale Präzision</label>
+                </div>
+                <div>
+                    <input
+                        id="maxPrecision"
+                        name="maxPrecision"
+                        value="10"
+                        max="10"
+                        min="1"
+                        type="number"
+                        required
+                    /><label for="maxPrecision">Maximale Präzision</label>
+                </div>
+                <div>
+                    <select id="colorTeam1" name="colorTeam1" required>
+                        <option value="red">Rot</option>
+                        <option value="yellow">Gelb</option>
+                        <option value="green">Grün</option>
+                        <option value="blue">Blau</option>
+                        <option value="pink">Pink</option>
+                        <option value="grey">Grau</option>
+                        <option value="brown">Braun</option></select
+                    ><label for="colorTeam1">Farbe Team 1</label>
+                </div>
+                <div>
+                    <select id="colorTeam2" name="colorTeam2" required>
+                        <option value="yellow">Gelb</option>
+                        <option value="red">Rot</option>
+                        <option value="green">Grün</option>
+                        <option value="blue">Blau</option>
+                        <option value="pink">Pink</option>
+                        <option value="grey">Grau</option>
+                        <option value="brown">Braun</option></select
+                    ><label for="colorTeam2">Farbe Team 2</label>
+                </div>
+                <div><button type="submit">Simulation starten!</button></div>
+            </form>
+            <div id="manual">
+                <p>Wenn ein Spieler im Ballbesitz ist, kann man mit <b>Linksklick</b> den Ball in Cursorrichtig schießen.</p>
+                <p>Per <b>Rechtsklick</b> lässt sich ein Spieler selektieren, der sich auf dem Cursor befindet</p>
+                <p>Per <b>Rechtsklick</b> auf das Spielfeld lässt sich die Selektierung entfernen
+                <p>Ein Klick auf <b>Reset Ball</b> setzt den Ball in die Mitte des Spielfeldes zurück.</p>
+                <p>Nach einem Klick auf <b>Neuen Spieler für #TEAMNAME# einwechseln</b> kann man die Position des neuen Spielers auf dem Feld per <b>Rechtsklick</b> bestimmen.</p></p>
+            </div>
+        </div>
+        <canvas width="1200" height="700" id="field"></canvas>
+        <div id="controls"></div>
+        <div id="gameInfo"></div>
+        <script src="js/Settings.js"></script>
+        <script src="js/Participant.js"></script>
+        <script src="js/Player.js"></script>
+        <script src="js/Referee.js"></script>
+        <script src="js/Ball.js"></script>
+        <script src="js/SideReferee.js"></script>
+        <script src="js/Team.js"></script>
+        <script src="js/Game.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
